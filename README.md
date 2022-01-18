@@ -1,4 +1,4 @@
-### ISMIS Crawler by Zach Riane Machacon
+# ISMIS Crawler by Zach Riane Machacon
 
 ## Context
 Recently, I've been fascinated by the concept of webscraping using Python. Therefore, I will be using it to my advantage to solve my laziness by letting a script view my grades for me. 

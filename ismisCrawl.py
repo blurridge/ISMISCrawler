@@ -1,0 +1,1 @@
+# This script will enable us to scrape our grades without opening the ISMIS website.

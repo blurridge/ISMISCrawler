@@ -48,6 +48,7 @@ try:
     )
     tables = body.find_elements(By.CLASS_NAME, "table")
     maxTables = len(tables)
+    # Changes range value based on number of tables
     if(maxTables == 2):
         rangeValue = maxTables - 1
     else:

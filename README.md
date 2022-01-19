@@ -5,3 +5,9 @@ Recently, I've been fascinated by the concept of webscraping using Python. There
 
 ## Current ideas
 I'm planning to use Selenium through a headless Chromium webdriver to do authentication for me and accessing the grades URL itself. The grades are enclosed in tables which could be parsed by the script easily with a bit of experimentation.
+
+## Progress report
+January 19, 2021
+- Managed to impelement authentication and scraping capability.
+- Need to implement a catch function in case of site crash or incorrect credentials.
+

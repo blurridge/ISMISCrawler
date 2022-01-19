@@ -21,10 +21,14 @@ try:
         courseCode = tables[tableIndex].find_elements(By.CLASS_NAME, "col-lg-3")
         courseName = tables[tableIndex].find_elements(By.CLASS_NAME, "col-lg-6")
         unitNum = tables[tableIndex].find_elements(By.CSS_SELECTOR, "td.hidden-xs")
-        gradeValue = tables[tableIndex].find_elements(By.CSS_SELECTOR, "td.col-lg-1")
+        gradeValue = tables[tableIndex].find_elements(By.CSS_SELECTOR, "td.col-lg-1:not(.hidden-xs)")
         maxCourses = len(courseCode)
+        gradeIndex = 0
+        print("{:20s} {:40s} {:7s} {:4s} {:4s}".format("Course Code", "Course Name", "Units", "MG", "FG"))
         for index in range(maxCourses):
-            print(f"{gradeValue[index].text}")
+            print("{:20s} {:40s} {:7s} {:4s} {:4s}".format(courseCode[index].text, courseName[index].text, unitNum[index].text, gradeValue[gradeIndex].text, gradeValue[gradeIndex+1].text))
+            gradeIndex+=2
+        print("\n\n")
 
 finally:
     print("DONE!")

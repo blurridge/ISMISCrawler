@@ -38,7 +38,7 @@ def getUserInput(prompt, maximumNumber = None):
                     return userInput
                 print("Invalid Input. Username is over 10 characters")
     elif prompt == "What is your password?":
-        return getpass.getpass("What is your password?") # Censors password entry
+        return getpass.getpass(prompt) # Censors password entry
 
 def loginAttempt(username, password):
     browser.get("https://ismis.usc.edu.ph")

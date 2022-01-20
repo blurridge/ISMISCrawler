@@ -11,3 +11,6 @@ January 19, 2021
 - Managed to impelement authentication and scraping capability.
 - Need to implement a catch function in case of site crash or incorrect credentials.
 
+January 20, 2021
+- Implemented checking for login status and site crash.
+- Next plan would be to implement a checker for remaining balance for the semester.

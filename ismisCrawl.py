@@ -11,6 +11,17 @@ import time
 import getpass
 import os
 
+def getUserInput(prompt,maximumNumber=None):
+    if prompt == "What is your username?":
+        if maximumNumber is not None:
+            while True:
+                userInput = input(prompt + "\n")
+                if(len(userInput) < maximumNumber):
+                    return userInput
+                print("Invalid Input. Username is over 10 characters")
+    elif prompt == "What is your password?":
+        return getpass.getpass("What is your password?")
+
 options = Options()
 options.headless = True # Enables Chromium browser to run without being visible
 ser = Service("/Users/blurridge/Documents/Coding/ISMISCrawler/chromedriver")
@@ -18,10 +29,9 @@ browser = webdriver.Chrome(service = ser, options = options)
 
 clear = lambda: os.system('clear') # Clears the terminal
 
-print("What is your username?")
-usernameInput = input()
+usernameInput = getUserInput("What is your username?", 10)
 clear()
-passwordInput = getpass.getpass("What is your password?") # Censors password entry
+passwordInput = getUserInput("What is your password?", None) # Censors password entry
 clear()
 
 browser.get("https://ismis.usc.edu.ph")

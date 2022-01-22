@@ -70,6 +70,15 @@ def checkSiteCrash(element):
     return False
 
 # Main
+clear() 
+
+print("Welcome to blurridge's ISMIS Crawler!\n")
+print("Delivering your grades without the hassle.")
+time.sleep(1)
+print("Loading...")
+
+time.sleep(2)
+clear()
 
 while(loginStatus == False): # Upon failed login, program resets and asks for user input once again
     usernameInput = getUserInput("What is your username?", 10)

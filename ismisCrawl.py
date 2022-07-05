@@ -21,7 +21,8 @@ import os
 
 options = Options()
 options.headless = True # Enables Chromium browser to run without being visible
-ser = Service("/Users/blurridge/Documents/Coding/ISMISCrawler/chromedriver")
+options.add_experimental_option("excludeSwitches", ["enable-logging"]) # Disables DevTools logs on terminal
+ser = Service("./chromedriver")
 browser = webdriver.Chrome(service = ser, options = options)
 clear = lambda: os.system('clear') # Clears the terminal
 loginStatus = False # Login status initially declared False to initialize next loop of gathering credentials
@@ -70,6 +71,7 @@ def checkSiteCrash(element):
     return False
 
 # Main
+
 clear() 
 
 print("Welcome to blurridge's ISMIS Crawler!\n")
